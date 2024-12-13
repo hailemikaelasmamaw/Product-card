@@ -3,9 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    }
+}
 
-    body {
+body {
     font-family: Arial, sans-serif;
     background-color: hsl(30, 38%, 92%);
     display: flex;
@@ -15,8 +15,8 @@
     padding: 1rem;
 }
 
-  /* Card Container */
-    .card {
+/* Card Container */
+.card {
     background-color: #fff;
     border-radius: 10px;
     overflow: hidden;
@@ -25,64 +25,65 @@
     max-width: 375px; /* Mobile default */
 }
 
-  /* Image */
-    .card img {
+/* Image */
+.card img {
     width: 100%;
     display: block;
     object-fit: cover;
+    content: url('image-product-mobile.jpg'); /* Default mobile image */
 }
 
-  /* Content Section */
-    .card-content {
+/* Content Section */
+.card-content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
-  /* Perfume Tag */
-    .card-content .tag {
+/* Perfume Tag */
+.card-content .tag {
     font-size: 0.75rem;
     letter-spacing: 5px;
     text-transform: uppercase;
     color: hsl(228, 12%, 48%);
 }
 
-  /* Title */
-    .card-content h1 {
+/* Title */
+.card-content h1 {
     font-size: 1.75rem;
     line-height: 1.2;
     color: hsl(212, 21%, 14%);
 }
 
-  /* Description */
-    .card-content p {
+/* Description */
+.card-content p {
     font-size: 0.875rem;
     line-height: 1.5;
     color: hsl(228, 12%, 48%);
 }
 
-  /* Price Section */
-    .price {
+/* Price Section */
+.price {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-    .price .new-price {
+.price .new-price {
     font-size: 1.5rem;
     font-weight: bold;
     color: hsl(158, 36%, 37%);
 }
 
-    .price .old-price {
+.price .old-price {
     font-size: 0.875rem;
     text-decoration: line-through;
     color: hsl(228, 12%, 48%);
 }
 
-  /* Button */
-    button {
+/* Button */
+button {
     background-color: hsl(158, 36%, 37%);
     color: #fff;
     font-size: 0.875rem;
@@ -107,19 +108,20 @@ button img {
     height: 16px;
 }
 
-  /* Desktop Design */
-    @media (min-width: 600px) {
+/* Desktop Design */
+@media (min-width: 600px) {
     .card {
         flex-direction: row;
         max-width: 600px;
-}
+    }
 
     .card img {
-      width: 50%; /* Half width */
-}
+        width: 50%; /* Half width */
+        content: url('image-product-desktop.jpg'); /* Switch to desktop image */
+    }
 
     .card-content {
         padding: 2rem;
         gap: 1.25rem;
-}
+    }
 }
