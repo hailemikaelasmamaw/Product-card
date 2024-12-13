@@ -116,9 +116,11 @@ button:hover {
 }
 
 button img {
-    width: 16px;
-    height: 16px;
+    width: 18px; /* Ensure image is properly sized */
+    height: 18px; /* Adjust height to match the width */
+    object-fit: contain; /* Ensure the aspect ratio is preserved */
 }
+
 
 /* Desktop Design */
 @media (min-width: 600px) {
