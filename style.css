@@ -1,3 +1,6 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+
 /* General Reset */
 * {
     margin: 0;
@@ -5,9 +8,12 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
-    font-family: Arial, sans-serif;
-    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px; /* Paragraph size */
+    background-color: hsl(30, 38%, 92%); /* Cream */
+    color: hsl(228, 12%, 48%); /* Dark grayish blue */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,23 +23,22 @@ body {
 
 /* Card Container */
 .card {
-    background-color: #fff;
+    background-color: hsl(0, 0%, 100%); /* White */
     border-radius: 10px;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    max-width: 375px; /* Mobile default */
+    max-width: 375px; /* Mobile design */
 }
 
-/* Image */
+/* Product Image */
 .card img {
     width: 100%;
     display: block;
     object-fit: cover;
-    content: url('image-product-mobile.jpg'); /* Default mobile image */
 }
 
-/* Content Section */
+/* Card Content */
 .card-content {
     padding: 1.5rem;
     display: flex;
@@ -41,26 +46,30 @@ body {
     gap: 1rem;
 }
 
-/* Perfume Tag */
+/* Tag (Perfume) */
 .card-content .tag {
-    font-size: 0.75rem;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
-    color: hsl(228, 12%, 48%);
+    color: hsl(228, 12%, 48%); /* Dark grayish blue */
 }
 
 /* Title */
 .card-content h1 {
+    font-family: 'Fraunces', serif;
     font-size: 1.75rem;
+    font-weight: 700;
     line-height: 1.2;
-    color: hsl(212, 21%, 14%);
+    color: hsl(212, 21%, 14%); /* Very dark blue */
 }
 
 /* Description */
 .card-content p {
     font-size: 0.875rem;
     line-height: 1.5;
-    color: hsl(228, 12%, 48%);
+    color: hsl(228, 12%, 48%); /* Dark grayish blue */
 }
 
 /* Price Section */
@@ -71,23 +80,26 @@ body {
 }
 
 .price .new-price {
+    font-family: 'Fraunces', serif;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: hsl(158, 36%, 37%);
+    font-weight: 700;
+    color: hsl(158, 36%, 37%); /* Dark cyan */
 }
 
 .price .old-price {
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
     text-decoration: line-through;
-    color: hsl(228, 12%, 48%);
+    color: hsl(228, 12%, 48%); /* Dark grayish blue */
 }
 
 /* Button */
 button {
-    background-color: hsl(158, 36%, 37%);
-    color: #fff;
+    background-color: hsl(158, 36%, 37%); /* Dark cyan */
+    color: hsl(0, 0%, 100%); /* White */
+    font-family: 'Montserrat', sans-serif;
     font-size: 0.875rem;
-    font-weight: bold;
+    font-weight: 700;
     border: none;
     border-radius: 8px;
     padding: 0.75rem;
@@ -96,11 +108,11 @@ button {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: hsl(158, 48%, 28%);
+    background-color: hsl(158, 48%, 28%); /* Darker cyan on hover */
 }
 
 button img {
@@ -112,12 +124,11 @@ button img {
 @media (min-width: 600px) {
     .card {
         flex-direction: row;
-        max-width: 600px;
+        max-width: 600px; /* Adjusted for larger screens */
     }
 
-    .card img {
-        width: 50%; /* Half width */
-        content: url('image-product-desktop.jpg'); /* Switch to desktop image */
+    .product-image {
+        width: 50%; /* Half width for the image */
     }
 
     .card-content {
